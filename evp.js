@@ -1,6 +1,6 @@
 var map, markers2018, markersclean, markers2019, markers, gallery;
 
-jQuery.getJSON('https://bmm.raphaelnussbaumer.com/explorevp/assets/radar_list.json',function(radars){
+jQuery.getJSON('./assets/radar_list.json',function(radars){
 
 
 
@@ -140,7 +140,7 @@ function UpdateFigure(){
 	jQuery('#status').html('<i class="fas fa-lg fa-spinner fa-spin"></i>')
 	var radar = jQuery('#sel1 option:selected').val();
 	var source = jQuery('#sel2 option:selected').val();
-	jQuery.getJSON('https://bmm.raphaelnussbaumer.com/explorevp/assets/' + source + '/dc_'+radar+'.json',function(d){
+	jQuery.getJSON('./assets/' + source + '/dc_'+radar+'.json',function(d){
 	
 	
 	if (jQuery('input[name=0toNaN]').prop('checked')){
